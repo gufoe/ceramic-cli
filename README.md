@@ -19,4 +19,10 @@ ceramic set PROJECT-SECRET
 Zip folder, upload to server, queue build, and download apk when ready:
 ```sh
 ceramic build ./www/
+Zipping ./www/
+Build queued
+      building
+      built
+Downloading apk...
+/tmp/41074beb-1d47-51cd-b422-e76011701a75.apk
 ```
