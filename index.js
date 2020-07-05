@@ -17,8 +17,12 @@ const file_put = async (file, data) => {
   return await fs.writeFileSync(file, JSON.stringify(data))
 }
 const file_get = async file => {
-  const data = await fs.readFileSync(file)
-  return JSON.parse(data || 'null')
+  try {
+    const data = await fs.readFileSync(file)
+    return JSON.parse(data || 'null')
+  } catch (e) {
+    return null
+  }
 }
 const download = async (token, path) => {
   const writer = fs.createWriteStream(path)
